@@ -1,0 +1,81 @@
+
+.title {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: 2.6em;
+    font-family: 'Ultra' , serif;
+    min-height: 20vh;
+    max-height: 20vh;
+     
+}
+
+.quote {
+    padding-top: 75px;
+    min-height: 65vh;
+    max-height: 65vh;
+  
+}
+
+.footer {
+    padding-top: 50px;
+    padding-bottom: 0px;
+    text-align: center;
+    min-height: 15vh;
+    max-height: 15vh;
+}
+
+.main {
+    
+    color : white;
+    background : rgb(255,122,122); 
+    background: -moz-linear-gradient(top, rgba(255,122,122,1) 0%, rgba(234,7,101,1) 50%, rgba(224,71,122,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(255,122,122,1) 0%,rgba(234,7,101,1) 50%,rgba(224,71,122,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,122,122,1) 0%,rgba(234,7,101,1) 50%,rgba(224,71,122,1) 100%);
+    min-height: 100vh ;
+    max-height: 100vh ;
+      
+}
+.float{
+	position:fixed;
+	width:70px;
+	height:70px;
+	bottom:100px;
+	right:40px;
+	background-color:#ffff75;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+.my-float{
+	margin-top:22px;
+}
+
+
+.content:before, .content:after {
+    content:'\f10d';
+    font-family:'FontAwesome';
+    font-size:60px;
+    position:absolute;
+    top:5px;
+    left:8px;
+    display:block;
+}
+.content:after {
+    content:'\f10e';
+    bottom:0;
+    right:8px;
+    top:auto;
+    bottom: auto;
+    left:auto;
+}
+
+.content {
+    text-align: center;
+    font-size: 2.4em;
+   
+}
+
+
+
