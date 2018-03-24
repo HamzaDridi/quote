@@ -1,10 +1,16 @@
+function stripHTML(dirtyString) {
+
+  return dirtyString.replace(/(<([^>]+)>)/ig,""); // innerHTML will be a xss safe string
+}
+
 $( document ).ready(function() {
     
     $.ajax( {
-      url: 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
+      url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
       success: function(data) {
         var post = data.shift(); 
         $('.content').html(post.content);
+           $('.twwet').attr("href", "https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text="+stripHTML(post.content));
       },
       cache: false
     });
@@ -12,7 +18,7 @@ $( document ).ready(function() {
 $('#reload-btn').on('click', function(e) {
     e.preventDefault();
     $.ajax( {
-      url: 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
+      url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
         beforeSend: function(){
         $('#spinner').addClass('fa-spin');
     },
@@ -23,6 +29,7 @@ $('#reload-btn').on('click', function(e) {
       success: function(data) {
         var post = data.shift(); 
         $('.content').html(post.content);
+        $('.twwet').attr("href", "https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text="+stripHTML(post.content));
       },
       cache: false
     });

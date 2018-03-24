@@ -73,9 +73,18 @@
 
 .content {
     text-align: center;
-    font-size: 18px;
+    font-size: 2.4em;
    
 }
-
-
-
+.twwet {
+    position:fixed;
+	width:70px;
+	height:70px;
+	bottom:100px;
+	left:40px;
+	background-color:#ffff75;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
